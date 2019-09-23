@@ -21,12 +21,12 @@ a{
 }
 .header{
 	padding: 50px 0;
-	background-image: url(css_images/Girar_Heading.jpg);
+	background-image: url(../image/headjfif.jfif);
 }
 .header h1,
 .header h2{
-	color:#0077b3;
-	text-shadow: red 0 0 2px;
+	color:white;
+	text-shadow: red 0 0 15px;
 	text-align: center;
 }
 .header h1{
@@ -57,6 +57,10 @@ a{
 .navigation li a:hover{
 	color: yellowgreen;
 	background-color: black;
+}
+
+.navigation li.right-nav{
+	float:right;
 }
 /*IMAGINEREFERENCES*/
 .refs{
