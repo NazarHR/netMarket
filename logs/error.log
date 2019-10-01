@@ -1,0 +1,277 @@
+2019/09/18 14:40:30 [error] 8160#4712: *1 CreateFile() "D:\Projects\server\nginx-1.16.1\nginx-1.16.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2019/09/18 14:51:46 [notice] 12012#7364: signal process started
+2019/09/18 14:52:08 [notice] 3816#4832: signal process started
+2019/09/18 14:52:08 [error] 3816#4832: CreateFile() "D:\Projects\server\nginx-1.16.1\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/18 14:59:21 [notice] 13528#14196: signal process started
+2019/09/18 14:59:21 [error] 13528#14196: CreateFile() "D:\Projects\server\nginx-1.16.1\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/24 18:33:50 [error] 15440#10272: *1 CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/09/24 18:34:49 [notice] 19936#9968: signal process started
+2019/09/25 03:11:07 [notice] 7488#1252: signal process started
+2019/09/25 03:11:07 [error] 7488#1252: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 10:46:51 [error] 14588#15580: *1 CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/09/25 10:47:58 [emerg] 7548#15208: directive "include" is not terminated by ";" in D:\Projects\git\netMarket\nginx-1.16.1/conf/nginx.conf:35
+2019/09/25 11:41:59 [emerg] 864#17984: directive "include" is not terminated by ";" in D:\Projects\git\netMarket\nginx-1.16.1/conf/nginx.conf:35
+2019/09/25 11:42:53 [emerg] 13180#13688: directive "include" is not terminated by ";" in D:\Projects\git\netMarket\nginx-1.16.1/conf/nginx.conf:35
+2019/09/25 11:43:17 [emerg] 17272#16164: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/conf/conf/myConf.conf" failed (3: The system cannot find the path specified) in D:\Projects\git\netMarket\nginx-1.16.1/conf/nginx.conf:34
+2019/09/25 11:44:21 [emerg] 20096#9672: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/conf/conf/myConf.conf" failed (3: The system cannot find the path specified) in D:\Projects\git\netMarket\nginx-1.16.1/conf/nginx.conf:34
+2019/09/25 11:45:37 [emerg] 18764#18232: unexpected "}" in D:\Projects\git\netMarket\nginx-1.16.1/conf/myConf.conf:7
+2019/09/25 11:46:15 [warn] 92#9672: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 11:46:15 [notice] 92#9672: signal process started
+2019/09/25 11:46:15 [error] 92#9672: OpenEvent("Global\ngx_reload_14788") failed (2: The system cannot find the file specified)
+2019/09/25 12:01:29 [warn] 13584#18360: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 12:01:29 [notice] 13584#18360: signal process started
+2019/09/25 12:01:29 [error] 13584#18360: OpenEvent("Global\ngx_quit_14788") failed (2: The system cannot find the file specified)
+2019/09/25 18:05:32 [warn] 8248#19884: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:05:32 [warn] 11512#10288: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:05:54 [error] 11512#10912: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:3000/favicon.ico", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/09/25 18:05:56 [error] 11512#10912: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:3000/", host: "127.0.0.1"
+2019/09/25 18:05:58 [error] 11512#10912: *1 connect() failed (10061: No connection could be made because the target machine actively refused it) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:3000/favicon.ico", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/09/25 18:15:01 [warn] 11732#16064: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:15:01 [notice] 11732#16064: signal process started
+2019/09/25 18:15:01 [warn] 15180#16536: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:16:04 [warn] 14808#5464: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:16:04 [notice] 14808#5464: signal process started
+2019/09/25 18:21:19 [emerg] 7284#15092: unexpected "}" in D:\Projects\git\netMarket\nginx-1.16.1/conf/myConf.conf:8
+2019/09/25 18:25:46 [emerg] 1624#16092: unexpected "}" in D:\Projects\git\netMarket\nginx-1.16.1/conf/myConf.conf:8
+2019/09/25 18:26:04 [emerg] 2112#11672: unexpected "}" in D:\Projects\git\netMarket\nginx-1.16.1/conf/myConf.conf:8
+2019/09/25 18:26:58 [warn] 12888#4880: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:26:58 [notice] 12888#4880: signal process started
+2019/09/25 18:26:58 [error] 12888#4880: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:27:38 [warn] 8188#17360: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:27:38 [notice] 8188#17360: signal process started
+2019/09/25 18:27:38 [error] 8188#17360: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:30:09 [warn] 14528#2224: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:30:09 [notice] 14528#2224: signal process started
+2019/09/25 18:30:09 [error] 14528#2224: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:30:44 [warn] 4272#14236: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:30:44 [warn] 6040#17420: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:30:49 [error] 6040#9496: *1 CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/09/25 18:31:26 [warn] 18688#10668: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:31:26 [notice] 18688#10668: signal process started
+2019/09/25 18:31:33 [warn] 16600#19020: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:31:33 [warn] 9232#3176: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:31:37 [error] 9232#2088: *1 "D:\Projects\git\netMarket\nginx-1.16.1/../html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:31:43 [error] 9232#2088: *1 "D:\Projects\git\netMarket\nginx-1.16.1/../html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:33:26 [error] 9232#2088: *3 "D:\Projects\git\netMarket\nginx-1.16.1/../html/index.html" is not found (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:33:32 [warn] 19764#11904: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:33:32 [notice] 19764#11904: signal process started
+2019/09/25 18:36:57 [warn] 14612#6784: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:36:57 [notice] 14612#6784: signal process started
+2019/09/25 18:36:57 [error] 14612#6784: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:38:17 [warn] 13844#9388: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:38:17 [notice] 13844#9388: signal process started
+2019/09/25 18:38:17 [error] 13844#9388: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:38:28 [warn] 14480#15556: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:38:28 [warn] 19256#19000: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:40:51 [emerg] 15992#19836: unexpected "}" in D:\Projects\git\netMarket\nginx-1.16.1/conf/myConf.conf:18
+2019/09/25 18:41:15 [warn] 12768#17392: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:41:15 [notice] 12768#17392: signal process started
+2019/09/25 18:41:15 [warn] 12680#3584: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:41:18 [warn] 4844#144: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:41:18 [warn] 17204#6932: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:41:22 [crit] 12680#7816: *3 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:44:39 [warn] 14572#15492: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:44:39 [notice] 14572#15492: signal process started
+2019/09/25 18:44:39 [warn] 7228#11460: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:44:42 [warn] 20128#11148: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:44:42 [warn] 15228#15912: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:44:47 [crit] 12680#7816: *5 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:09 [warn] 19348#2740: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:45:09 [notice] 19348#2740: signal process started
+2019/09/25 18:45:09 [warn] 15700#6300: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:45:11 [warn] 12792#7572: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:45:11 [warn] 7096#15256: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:45:14 [crit] 12680#7816: *7 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:14 [crit] 12680#7816: *8 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:15 [crit] 12680#7816: *9 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:15 [crit] 12680#7816: *10 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:15 [crit] 12680#7816: *11 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:15 [crit] 12680#7816: *12 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:16 [crit] 12680#7816: *13 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:45:16 [crit] 12680#7816: *14 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:02 [warn] 14624#15140: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:02 [notice] 14624#15140: signal process started
+2019/09/25 18:46:06 [crit] 12680#7816: *16 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:07 [crit] 12680#7816: *17 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:07 [crit] 12680#7816: *18 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:08 [crit] 12680#7816: *19 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:08 [crit] 12680#7816: *20 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:08 [crit] 12680#7816: *21 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:08 [crit] 12680#7816: *22 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:08 [crit] 12680#7816: *23 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:09 [crit] 12680#7816: *24 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:10 [crit] 12680#7816: *25 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:10 [crit] 12680#7816: *26 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:10 [crit] 12680#7816: *27 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:10 [crit] 12680#7816: *28 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:11 [crit] 12680#7816: *29 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:11 [crit] 12680#7816: *30 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:12 [crit] 12680#7816: *31 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:12 [crit] 12680#7816: *32 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:12 [crit] 12680#7816: *33 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:12 [crit] 12680#7816: *34 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:46:42 [warn] 14720#19816: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:42 [notice] 14720#19816: signal process started
+2019/09/25 18:46:42 [error] 14720#19816: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:44 [warn] 18468#19244: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:44 [notice] 18468#19244: signal process started
+2019/09/25 18:46:44 [error] 18468#19244: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:45 [warn] 5964#9368: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:45 [notice] 5964#9368: signal process started
+2019/09/25 18:46:45 [error] 5964#9368: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:45 [warn] 11736#4076: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:45 [notice] 11736#4076: signal process started
+2019/09/25 18:46:45 [error] 11736#4076: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:46 [warn] 4184#16772: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:46 [notice] 4184#16772: signal process started
+2019/09/25 18:46:46 [error] 4184#16772: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:46 [warn] 1080#3464: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:46 [notice] 1080#3464: signal process started
+2019/09/25 18:46:46 [error] 1080#3464: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:47 [warn] 15768#16284: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:47 [notice] 15768#16284: signal process started
+2019/09/25 18:46:47 [error] 15768#16284: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:47 [warn] 16756#18828: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:47 [notice] 16756#18828: signal process started
+2019/09/25 18:46:47 [error] 16756#18828: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:48 [warn] 17484#11240: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:48 [notice] 17484#11240: signal process started
+2019/09/25 18:46:48 [error] 17484#11240: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:48 [warn] 11876#11700: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:48 [notice] 11876#11700: signal process started
+2019/09/25 18:46:48 [error] 11876#11700: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:49 [warn] 2276#6040: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:49 [notice] 2276#6040: signal process started
+2019/09/25 18:46:49 [error] 2276#6040: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:49 [warn] 3112#7436: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:49 [notice] 3112#7436: signal process started
+2019/09/25 18:46:49 [error] 3112#7436: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:50 [warn] 13028#9336: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:50 [notice] 13028#9336: signal process started
+2019/09/25 18:46:50 [error] 13028#9336: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:46:51 [warn] 7752#19660: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:46:51 [notice] 7752#19660: signal process started
+2019/09/25 18:46:51 [error] 7752#19660: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:47:06 [crit] 12680#7816: *36 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:07 [crit] 12680#7816: *37 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:07 [crit] 12680#7816: *38 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:08 [crit] 12680#7816: *39 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:08 [crit] 12680#7816: *40 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:08 [crit] 12680#7816: *41 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:08 [crit] 12680#7816: *42 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:09 [crit] 12680#7816: *43 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:09 [crit] 12680#7816: *44 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:09 [crit] 12680#7816: *45 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:47:47 [warn] 6608#6764: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:47:47 [warn] 1660#1280: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:51:25 [warn] 18200#13364: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:51:25 [notice] 18200#13364: signal process started
+2019/09/25 18:51:37 [warn] 18924#6560: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:51:37 [notice] 18924#6560: signal process started
+2019/09/25 18:51:37 [error] 18924#6560: CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/09/25 18:52:18 [crit] 12680#7816: *47 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 18:54:14 [warn] 16756#16768: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:54:14 [warn] 16644#18104: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:56:04 [warn] 15180#8916: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:56:04 [notice] 15180#8916: signal process started
+2019/09/25 18:57:30 [warn] 12832#13360: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:57:30 [warn] 3716#12084: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:58:03 [warn] 8296#1180: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:58:03 [notice] 8296#1180: signal process started
+2019/09/25 18:58:23 [warn] 20044#19832: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:58:23 [warn] 2336#15616: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 18:58:28 [crit] 2336#15520: *1 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 19:02:20 [warn] 11340#15244: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:02:20 [notice] 11340#15244: signal process started
+2019/09/25 19:02:20 [warn] 8024#13148: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:03:20 [crit] 8024#20144: *3 GetFileAttributesEx() "D:\Projects\git
+etMarket" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 19:03:58 [warn] 12644#11920: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:03:58 [notice] 12644#11920: signal process started
+2019/09/25 19:03:58 [warn] 11252#12424: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:04:52 [warn] 8940#10804: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:04:52 [notice] 8940#10804: signal process started
+2019/09/25 19:04:53 [warn] 17812#4980: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:04:56 [error] 17812#19272: *7 directory index of "D:\Projects\git\netMarket\nginx-1.16.1/./" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 19:05:20 [warn] 8556#14400: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:05:20 [notice] 8556#14400: signal process started
+2019/09/25 19:05:20 [warn] 18468#11736: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2019/09/25 19:06:26 [notice] 8664#19900: signal process started
+2019/09/25 19:07:10 [notice] 12952#1056: signal process started
+2019/09/25 19:09:32 [error] 10948#8032: *13 CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/html/index.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 19:09:35 [error] 10948#8032: *13 CreateFile() "D:\Projects\git\netMarket\nginx-1.16.1/html/index.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/09/25 19:10:07 [crit] 20044#19832: CreateProcess("D:\Projects\git\netMarket\nginx-1.16.1\nginx.exe") failed (2: The system cannot find the file specified)
+2019/09/25 19:10:07 [alert] 20044#19832: could not respawn worker
+2019/09/25 19:13:34 [emerg] 17380#8032: CreateFile() "D:\Projects\git\netMarket/conf/nginx.conf" failed (3: The system cannot find the path specified)
+2019/09/25 19:14:16 [emerg] 8248#11112: CreateFile() "D:\Projects\git\netMarket/conf/nginx.conf" failed (3: The system cannot find the path specified)
+2019/09/25 19:20:28 [notice] 2452#13688: signal process started
+2019/09/25 19:21:01 [notice] 2336#18952: signal process started
+2019/09/25 19:21:10 [notice] 7068#13336: signal process started
+2019/09/25 19:21:31 [notice] 16844#7388: signal process started
+2019/09/25 19:22:13 [notice] 7504#19272: signal process started
+2019/09/25 19:23:37 [notice] 11952#1752: signal process started
+2019/09/25 19:25:01 [notice] 8296#19504: signal process started
+2019/09/25 19:25:20 [notice] 11012#1248: signal process started
+2019/09/25 19:25:35 [notice] 5336#7924: signal process started
+2019/09/25 19:25:49 [notice] 18232#4944: signal process started
+2019/09/25 19:26:04 [notice] 3080#15160: signal process started
+2019/09/25 19:26:44 [notice] 2936#17512: signal process started
+2019/09/25 19:33:52 [notice] 10004#14016: signal process started
+2019/09/25 19:34:34 [notice] 4292#7320: signal process started
+2019/09/25 19:35:15 [notice] 8040#15860: signal process started
+2019/09/25 19:35:33 [notice] 15096#15968: signal process started
+2019/09/25 19:36:56 [notice] 8736#9808: signal process started
+2019/09/25 19:37:39 [notice] 7204#12424: signal process started
+2019/09/25 19:37:58 [notice] 18396#8584: signal process started
+2019/09/25 19:39:23 [notice] 13172#12016: signal process started
+2019/09/25 19:39:51 [notice] 2492#2128: signal process started
+2019/09/25 19:41:43 [notice] 4812#9096: signal process started
+2019/09/25 19:43:19 [notice] 1544#16656: signal process started
+2019/09/25 19:56:17 [notice] 18548#18380: signal process started
+2019/09/25 20:21:39 [notice] 15588#11188: signal process started
+2019/09/25 20:22:26 [notice] 19348#5448: signal process started
+2019/09/25 20:23:59 [notice] 8244#10568: signal process started
+2019/09/25 20:24:14 [notice] 9688#6556: signal process started
+2019/09/25 20:25:03 [notice] 14980#18116: signal process started
+2019/09/25 21:00:55 [notice] 7584#16788: signal process started

@@ -1,0 +1,109 @@
+body{
+	font-family: Arial, San-Serif;
+	font-size: 100%;
+	margin: 0;
+	background-color: #1a1a1a;
+}
+ul{
+	margin: 0;
+	padding: 0
+}
+ul li{
+	list-style-type: none;
+
+}
+a{
+	text-decoration: none;
+}
+.container{
+	margin: 0 auto;
+	width: 960px;
+}
+.header{
+	padding: 50px 0;
+	background-image: url(../image/headjfif.jfif);
+}
+.header h1,
+.header h2{
+	color:white;
+	text-shadow: red 0 0 15px;
+	text-align: center;
+}
+.header h1{
+	font-size: 300%;
+}
+.header h2{
+	font-size: 150%;
+}
+.navigation{
+	background-color: #222;
+	border-color: #101010;
+	min-height: 64px;
+	position:sticky;
+	top: 0;
+}
+.navigation li{
+	float: left;
+	width: 100px;
+}
+.navigation a{
+	display: block;
+	color: #9d9d9d;
+	line-height: 4em;
+	font-weight: bold;
+	text-align: center;
+
+}
+.navigation li a:hover{
+	color: yellowgreen;
+	background-color: black;
+}
+
+.navigation li.right-nav{
+	float:right;
+}
+/*IMAGINEREFERENCES*/
+.refs{
+	overflow: auto;
+	padding-top: 42px;
+	padding-bottom: 42px;
+}
+.ref-outer{
+	display: inline-block;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 33.33%;
+	box-sizing: border-box;
+	
+}
+.ref-inside{
+	border: 1px solid #262626;
+	background-size: 100%;
+	background-color: black;
+}
+.ref-inside img
+{
+	width: 100%;
+}
+.ref-text{
+	padding: 0, 20px 20px 20px;
+	text-align: center;
+	background-color: black;
+}
+.ref-text h3{
+	text-align: center;
+color: yellowgreen;
+
+}
+.ref-text p{
+	color:#cccccc;
+	padding: 7px;
+}
+.footer {
+	margin-top: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+	background-color: #0d0d0d;
+}
