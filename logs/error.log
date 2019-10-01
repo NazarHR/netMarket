@@ -275,3 +275,12 @@ etMarket" failed (123: The filename, directory name, or volume label syntax is i
 2019/09/25 20:24:14 [notice] 9688#6556: signal process started
 2019/09/25 20:25:03 [notice] 14980#18116: signal process started
 2019/09/25 21:00:55 [notice] 7584#16788: signal process started
+2019/09/25 21:01:48 [error] 16956#18752: *105 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /about_us HTTP/1.1", upstream: "http://127.0.0.1:3000/about_us", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/09/26 13:22:57 [notice] 18528#14616: signal process started
+2019/09/26 13:24:16 [notice] 11388#19128: signal process started
+2019/09/26 13:24:28 [notice] 20584#14836: signal process started
+2019/09/26 13:26:41 [emerg] 19520#15296: duplicate location "/" in D:\Projects\git\netMarket/conf/myConf.conf:13
+2019/09/26 13:27:08 [emerg] 14084#3972: duplicate location "/" in D:\Projects\git\netMarket/conf/myConf.conf:13
+2019/09/26 13:27:20 [emerg] 12520#19240: duplicate location "/" in D:\Projects\git\netMarket/conf/myConf.conf:13
+2019/09/26 13:27:37 [notice] 7308#19032: signal process started
+2019/10/02 00:54:36 [notice] 31572#3108: signal process started

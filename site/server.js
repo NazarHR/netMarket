@@ -1,26 +1,15 @@
 
 
 const fs=require('fs');
-const http =require("http");
+const session = require('express-session')
+const express=require('express')
+var market=express();
+market.set('view engine','ejs');
 //const html = fs.createReadStream(__dirname + "/index.html",'utf-8');
-const server = http.createServer((req, res)=>{
-    console.log(req.url)
-    switch(req.url)
-    {
-        case '/':
-            fs.createReadStream(__dirname + "/html/index.html",'utf-8').pipe(res);
-            break;
-        case '/about_us':
-            console.log("about_ue");
-            fs.createReadStream(__dirname + "/html/index.html",'utf-8').pipe(res);
-            break;
-        default:
-            console.log("default case");
-            fs.createReadStream(__dirname + "/html/index.html",'utf-8').pipe(res);
-            break;
 
-    }
-    
-    console.log(req.url);   
-});
-server.listen(3000,()=>console.log("server started"));
+market.get('/',(req,res)=>{
+    console.log(req.url)
+    res.render('index');
+})
+
+market.listen(3000,()=>console.log("server started"));
