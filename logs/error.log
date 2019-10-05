@@ -284,3 +284,62 @@ etMarket" failed (123: The filename, directory name, or volume label syntax is i
 2019/09/26 13:27:20 [emerg] 12520#19240: duplicate location "/" in D:\Projects\git\netMarket/conf/myConf.conf:13
 2019/09/26 13:27:37 [notice] 7308#19032: signal process started
 2019/10/02 00:54:36 [notice] 31572#3108: signal process started
+2019/10/02 02:53:21 [emerg] 18496#30728: unexpected "}" in D:\Projects\git\netMarket/conf/myConf.conf:10
+2019/10/02 02:53:34 [notice] 9452#29504: signal process started
+2019/10/02 02:53:53 [notice] 27692#21312: signal process started
+2019/10/02 02:53:58 [error] 17844#21808: *83 CreateFile() "D:\Projects\git\netMarket/site/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:54:04 [error] 17844#21808: *83 CreateFile() "D:\Projects\git\netMarket/site/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:55:09 [notice] 26500#26852: signal process started
+2019/10/02 02:55:13 [error] 23020#9096: *86 CreateFile() "D:\Projects\git\netMarket/site/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:55:14 [error] 23020#9096: *86 CreateFile() "D:\Projects\git\netMarket/site/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:56:31 [notice] 31332#24124: signal process started
+2019/10/02 02:56:35 [error] 25940#28696: *88 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:56:36 [error] 25940#28696: *88 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:56:36 [error] 25940#28696: *88 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:57:00 [notice] 28792#30272: signal process started
+2019/10/02 02:57:11 [error] 31356#16764: *91 CreateFile() "D:\Projects\git\netMarket/html/register/register" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:57:53 [notice] 3536#16152: signal process started
+2019/10/02 02:57:57 [crit] 20944#30660: *94 CreateFile() "D:\Projects\git\netMarket/htmlegister/register" failed (123: The filename, directory name, or volume label syntax is incorrect), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:59:31 [emerg] 23288#24484: unexpected "}" in D:\Projects\git\netMarket/conf/myConf.conf:11
+2019/10/02 02:59:41 [notice] 18456#11924: signal process started
+2019/10/02 02:59:48 [error] 33644#27528: *97 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 02:59:52 [error] 33644#27528: *97 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:03:47 [error] 33644#27528: *100 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:03:51 [notice] 25692#17076: signal process started
+2019/10/02 03:03:55 [error] 33644#27528: *101 CreateFile() "D:\Projects\git\netMarket/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:05:03 [notice] 23500#21192: signal process started
+2019/10/02 03:05:07 [error] 7956#33412: *103 CreateFile() "D:\Projects\git\netMarket/site/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:05:08 [error] 7956#33412: *103 CreateFile() "D:\Projects\git\netMarket/site/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:05:08 [error] 7956#33412: *103 CreateFile() "D:\Projects\git\netMarket/site/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:05:08 [error] 7956#33412: *103 CreateFile() "D:\Projects\git\netMarket/site/html/register" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:06:39 [notice] 27448#31512: signal process started
+2019/10/02 03:07:05 [notice] 2504#26296: signal process started
+2019/10/02 03:09:40 [emerg] 9188#27516: invalid return code "html/register.html" in D:\Projects\git\netMarket/conf/myConf.conf:9
+2019/10/02 03:10:02 [notice] 13596#29020: signal process started
+2019/10/02 03:11:46 [emerg] 19100#14008: invalid number of arguments in "try_files" directive in D:\Projects\git\netMarket/conf/myConf.conf:9
+2019/10/02 03:12:23 [notice] 21868#24096: signal process started
+2019/10/02 03:13:00 [notice] 27832#4048: signal process started
+2019/10/02 03:16:25 [notice] 10996#28320: signal process started
+2019/10/02 03:18:17 [notice] 24616#12592: signal process started
+2019/10/02 03:18:23 [error] 29976#6116: *131 CreateFile() "D:\Projects\git\netMarket/htmlsite/html/register.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:20:00 [notice] 2936#31084: signal process started
+2019/10/02 03:20:06 [error] 22252#24040: *134 CreateFile() "D:\Projects\git\netMarket/htmlsite/html/register.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:21:23 [notice] 30864#25112: signal process started
+2019/10/02 03:21:29 [error] 33556#27304: *137 CreateFile() "D:\Projects\git\netMarket/htmlhtml/register.html" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /register HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2019/10/02 03:21:54 [notice] 24708#21312: signal process started
+2019/10/02 11:14:52 [emerg] 23600#5408: invalid number of arguments in "root" directive in D:\Projects\git\netMarket/conf/myConf.conf:10
+2019/10/02 11:15:15 [notice] 27944#31200: signal process started
+2019/10/02 11:16:02 [notice] 28004#23448: signal process started
+2019/10/02 11:26:58 [notice] 21192#2716: signal process started
+2019/10/02 13:31:35 [notice] 11852#28300: signal process started
+2019/10/02 13:35:52 [notice] 4060#32028: signal process started
+2019/10/02 13:36:55 [notice] 5860#27492: signal process started
+2019/10/02 13:38:21 [notice] 10812#11672: signal process started
+2019/10/02 13:41:41 [notice] 26484#31084: signal process started
+2019/10/02 13:43:53 [notice] 31008#26432: signal process started
+2019/10/02 13:45:16 [notice] 8824#4632: signal process started
+2019/10/02 13:49:01 [notice] 30420#19856: signal process started
+2019/10/02 14:27:09 [notice] 12328#20024: signal process started
+2019/10/02 14:29:10 [notice] 24488#32132: signal process started
+2019/10/02 14:32:02 [notice] 13060#25920: signal process started
+2019/10/02 14:32:24 [notice] 4048#16124: signal process started
