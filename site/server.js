@@ -1,12 +1,20 @@
-
-
+const {Client} = require('pg');
 const fs=require('fs');
 const session = require('session')
 const express=require('express')
 const jwt = require('jsonwebtoken')
 const bcrypt =require('bcrypt')
 const market=express();
-
+const client = new Client(
+    {
+        user:"postgres",
+        password:"v3lamalu",
+        host:"localhost",
+        port:5432,
+        database: "muse"
+    }
+)
+client.connect().then(()=>console.log("connected")).catch(e=>console.log)
 market.set('view engine','ejs');
 market.use(express.urlencoded({extended:false}))
 //const html = fs.createReadStream(__dirname + "/index.html",'utf-8');
@@ -21,12 +29,11 @@ market.post('/register_s', async (req,res)=>{
     try {
         const hasshedpassword= await bcrypt.hash(req.body.password,10)
         users.push({
-            id:Date.now().toString(),
             login:req.body.name,
             email: req.body.email,
             password:hasshedpassword
         })
-        res.redirect('/')
+        res.redirect('/login')
         console.log(users)
     } catch {
         res.redirect('/register')
@@ -35,4 +42,5 @@ market.post('/register_s', async (req,res)=>{
 market.post('/login_s', (req,res)=>{
     users.find()
 })
+
 market.listen(3000,()=>console.log("server started"));
