@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8" />
+        <title>Muse</title>
+        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
+    </head>
+
+ <body>
+    <%- include(page) %>
+        <main>
+            <div class="prod">
+               <div id="holder"></div>
+               <form>
+                <button type="button" id="BButton"> < </button>
+                </form>
+                <form>
+                    <button type="button" id="FButton"> > </button>
+                </form>
+            </div>
+        </main>
+        
+        <footer class="footer">
+         <div class="container">
+            <p>Copyright© Nazar 2019</p>
+         </div>
+        </footer>
+   </body>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script>
+    $(document).ready(function () {
+        var my_div = $("#holder");
+        let k=0;
+        $.ajax({
+            url: "/products/guitars/"+k
+        }).done(function loader(data){my_div.html(data);console.log("works");setTimeout(loader, 60000);});
+        let max=<%=maximal%>;
+        console.log(max);
+        document.getElementById("BButton").style.display = 'none';
+        $("#FButton").on("click", function () {
+            k++
+            document.getElementById("BButton").style.display = 'block';
+            if(k==max)document.getElementById("FButton").style.display = 'none';
+          $.ajax({
+             url: "/products/guitars/"+k
+          })
+          .done(function( data ) {
+             console.log( "Sample of data:", $(data).data(),);
+             my_div.html(data);
+          });
+        });
+
+        $("#BButton").on("click", function () {
+            k--
+            document.getElementById("FButton").style.display = 'block';
+            if(k===0)document.getElementById("BButton").style.display = 'none';
+          $.ajax({
+             url: "/products/guitars/"+k
+          })
+          .done(function( data ) {
+             console.log( "Sample of data:", $(data).data(),);
+             my_div.html(data);
+          });
+          
+        });
+    });
+</script>
+</script>
+</html>

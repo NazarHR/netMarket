@@ -107,3 +107,7 @@ color: yellowgreen;
 	color: white;
 	background-color: #0d0d0d;
 }
+.container {
+	text-decoration-color: whitesmoke;
+	font-size: 10px;
+}

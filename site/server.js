@@ -18,14 +18,43 @@ market.set('view engine','ejs');
 market.use(express.urlencoded({extended:false}))
 market.use(cookieParser())
 //const html = fs.createReadStream(__dirname + "/index.html",'utf-8');
-const index = {page:'head'}
 
 market.get('/',auth,(req,res)=>{
     console.log(req.user)
     console.log(req.url)
-    res.render('index',index);
+    if(req.user!=undefined)
+    {
+        res.render('index',{page:'headLogged'})
+    }
+    else
+    {
+        res.render('index',{page:'head'});
+    }
+    
 })
-
+var k=0
+market.get('/products/:id',(req,res)=>{
+    res.render('products',{page:'head',maximal:10})
+})
+market.get('/products/:id/:num',(req,res)=>{
+    console.log(req.params.num)
+    res.render('productLIst',{products: [{id: 1,name:"guitar",price: 1245,discount:0},
+    {id: 1,name:"guitar",price: 1245,discount:20},
+    {id: 2,name:"guitar1",price: 1245,discount:14},
+    {id: 3,name:"guitar2",price: 1245,discount:0},
+    {id: 4,name:"guitar3",price: 1245,discount:0},
+    {id: 5,name:"guitar4",price: 1245,discount:0},
+    {id: 6,name:"guitar5",price: 1245,discount:10},
+    {id: 7,name:"guitar6",price: 1245,discount:0},
+    {id: 8,name:"guitar7",price: 1245,discount:24},
+    {id: 9,name:"guitar8",price: 1245,discount:0},
+    {id: 9,name:"test",price: req.params.num,discount:0}]})
+})
+market.get('/logout',(req,res)=>
+{
+    res.clearCookie('auth')
+    res.redirect('/')
+})
 market.post('/register_s', async (req,res)=>{
     try {
         const hasshedpassword= await bcrypt.hash(req.body.password,10)
@@ -73,12 +102,10 @@ market.post('/login_s', async (req,res)=>{
 })
 
 market.listen(3000,()=>console.log("server started"));
+
 function auth(req,res,next)
 {
     const token = req.cookies.auth;
-    console.log("token is")
-    console.log(typeof(token))
-    console.log(token)
     if(token===undefined)
     {
         console.log("here")

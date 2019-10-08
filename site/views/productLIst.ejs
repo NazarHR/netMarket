@@ -1,0 +1,7 @@
+<ul>
+    <% for(var i=0; i<products.length;i++) {%>
+        <li><img src=<%=products[i].id%>><%=products[i].name %><button type="bytton"><%if(products[i].discount==0){%> <%=products[i].price%>
+                                                                <%}else {%> <%=products[i].price*(1-products[i].discount/100)%>
+                                                                    <div class = old><%=products[i].price%></div><%}%></button></li>
+    <%} %>
+</ul>
