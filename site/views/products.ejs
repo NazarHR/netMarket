@@ -5,17 +5,17 @@
         <title>Muse</title>
         <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
     </head>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
  <body>
     <%- include(page) %>
         <main>
             <div class="prod">
                <div id="holder"></div>
                <form>
-                <button type="button" id="BButton"> < </button>
+                <button type="button" id="BButton"> backward </button>
                 </form>
                 <form>
-                    <button type="button" id="FButton"> > </button>
+                    <button type="button" id="FButton"> forward </button>
                 </form>
             </div>
         </main>
@@ -26,44 +26,59 @@
          </div>
         </footer>
    </body>
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   
    <script>
-    $(document).ready(function () {
-        var my_div = $("#holder");
-        let k=0;
-        $.ajax({
-            url: "/products/guitars/"+k
-        }).done(function loader(data){my_div.html(data);console.log("works");setTimeout(loader, 60000);});
-        let max=<%=maximal%>;
-        console.log(max);
-        document.getElementById("BButton").style.display = 'none';
-        $("#FButton").on("click", function () {
-            k++
-            document.getElementById("BButton").style.display = 'block';
-            if(k==max)document.getElementById("FButton").style.display = 'none';
-          $.ajax({
-             url: "/products/guitars/"+k
-          })
-          .done(function( data ) {
-             console.log( "Sample of data:", $(data).data(),);
-             my_div.html(data);
-          });
-        });
+       let k=0;
+       let max=<%=maximal%>;
+    $(document).ready(function () { 
 
-        $("#BButton").on("click", function () {
-            k--
-            document.getElementById("FButton").style.display = 'block';
-            if(k===0)document.getElementById("BButton").style.display = 'none';
-          $.ajax({
-             url: "/products/guitars/"+k
-          })
-          .done(function( data ) {
-             console.log( "Sample of data:", $(data).data(),);
-             my_div.html(data);
-          });
-          
+        $.ajax({
+            url: "/products/<%=kind%>/"+k.toString(),
+            type: 'put',
+            success:function loader(data){$("#holder").html(data);console.log("works");setTimeout(loader, 60000);}
+        })
+    });
+        console.log(max,"<%=kind%>");
+    document.getElementById("BButton").style.display = 'none';
+    $("#FButton").on("click", function () {
+        ++k
+        document.getElementById("BButton").style.display = 'block';
+        if(k==max)document.getElementById("FButton").style.display = 'none';
+        $.ajax({
+            url: "/products/<%=kind%>/"+k.toString(),
+            type:'put'
+        }).done(function( data ) {
+            console.log("/products/<%=kind%>/"+k );
+            $("#holder").html(data);
         });
     });
-</script>
+
+    $("#BButton").on("click", function () {
+        k--
+        document.getElementById("FButton").style.display = 'block';
+        if(k===0)document.getElementById("BButton").style.display = 'none';
+        $.ajax({
+            url: "/products/<%=kind%>/"+k.toString(),
+            type:'put'
+            
+        })
+        .done(function( data ) {
+            console.log( "Sample of data:", $(data).data());
+            $("#holder").html(data);
+        });
+    });  
+    function add_to_basket(prod_id) {
+            console.log(prod_id)
+            $.ajax({
+                url:'',
+                type:'post',
+                dataType: "json",
+                data:{id:prod_id}
+                // success:function(){
+                //     alert("worked");
+                //}
+            });
+            //return false;
+     };  
 </script>
 </html>

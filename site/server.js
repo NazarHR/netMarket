@@ -32,28 +32,26 @@ market.get('/',auth,(req,res)=>{
     }
     
 })
-var k=0
-market.get('/products/:id',(req,res)=>{
-    res.render('products',{page:'head',maximal:10})
+market.get('/products/:name',auth, async(req,res)=>{
+    console.log(req.params)
+    console.log("delimiter")
+    let num = await poll.query('Select count(*) from $1'.replace('$1',req.params.name))
+    let max =Math.ceil(num.rows[0].count/5)-1
+    res.render('products',{page:'head',maximal:max,kind:req.params.name})
+    res.end();
 })
-market.get('/products/:id/:num',(req,res)=>{
-    console.log(req.params.num)
-    res.render('productLIst',{products: [{id: 1,name:"guitar",price: 1245,discount:0},
-    {id: 1,name:"guitar",price: 1245,discount:20},
-    {id: 2,name:"guitar1",price: 1245,discount:14},
-    {id: 3,name:"guitar2",price: 1245,discount:0},
-    {id: 4,name:"guitar3",price: 1245,discount:0},
-    {id: 5,name:"guitar4",price: 1245,discount:0},
-    {id: 6,name:"guitar5",price: 1245,discount:10},
-    {id: 7,name:"guitar6",price: 1245,discount:0},
-    {id: 8,name:"guitar7",price: 1245,discount:24},
-    {id: 9,name:"guitar8",price: 1245,discount:0},
-    {id: 9,name:"test",price: req.params.num,discount:0}]})
+market.put('/products/:name/:num',async(req,res)=>{
+    //console.log(req.params.name)
+    console.log(req.url)
+    const products =await poll.query('Select * from $1'.replace('$1',req.params.name))
+    //console.log(products.rows)
+    res.render('productLIst',{products: products.rows})
 })
-market.get('/logout',(req,res)=>
-{
-    res.clearCookie('auth')
-    res.redirect('/')
+
+market.post('/products/:type',(req,res)=>{
+    //console.log("here");
+    //console.log(req.params.type)
+    //console.log(req.body);
 })
 market.post('/register_s', async (req,res)=>{
     try {
@@ -94,13 +92,16 @@ market.post('/login_s', async (req,res)=>{
         res.redirect('/')
     } catch (error) {
         console.log(error);
-        console.log(error)
         res.redirect('/login')
         
     }
     
 })
-
+market.get('/logout',(req,res)=>
+{
+    res.clearCookie('auth')
+    res.redirect('/')
+})
 market.listen(3000,()=>console.log("server started"));
 
 function auth(req,res,next)
@@ -108,8 +109,7 @@ function auth(req,res,next)
     const token = req.cookies.auth;
     if(token===undefined)
     {
-        console.log("here")
-        //req.user=token
+        //console.log("auth")
     }
     else{
         try {

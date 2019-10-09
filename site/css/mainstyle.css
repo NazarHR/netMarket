@@ -110,3 +110,20 @@ color: yellowgreen;
 #holder li{
 	color: white;
 }
+a.addbtn {
+	display: inline-block;
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	user-select: none;
+	padding: .5em 2em;
+	outline: none;
+	border: 2px solid;
+	border-radius: 1px;
+	transition: 0.2s;
+  } 
+  a.addbtn:hover { background: rgba(255,255,255,.2); }
+  a.addbtn:active { background: white; }
+  .old{
+	  text-decoration: line-through;
+  }

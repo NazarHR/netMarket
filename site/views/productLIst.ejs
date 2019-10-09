@@ -1,7 +1,13 @@
 <ul>
-    <% for(var i=0; i<products.length;i++) {%>
-        <li><img src=<%=products[i].id%>><%=products[i].name %><button type="bytton"><%if(products[i].discount==0){%> <%=products[i].price%>
-                                                                <%}else {%> <%=products[i].price*(1-products[i].discount/100)%>
-                                                                    <div class = old><%=products[i].price%></div><%}%></button></li>
+    <% for(let i=0; i<products.length; ++i) { %>
+        <li>
+            <img src= "image/<%=products[i].id%>" > <%=products[i].name %>
+            <a href ="" class="addbtn" type="submit", onmousedown="add_to_basket(<%=products[i].id%>)">
+                <%if(products[i].discount==0){%> <%=products[i].price%>
+                <%}else {%> <%=Math.ceil(((products[i].price*(1-products[i].discount/100)*100)/100))%>
+                    <div class = old><%=products[i].price%></div><%}%>
+                </a>
+        </li>
     <%} %>
 </ul>
+<!-- <script>console.log("here")</script> -->
