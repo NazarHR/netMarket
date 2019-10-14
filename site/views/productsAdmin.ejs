@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8" />
+        <title>Muse</title>
+        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
+    </head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <body>
+    <%- include(page) %>
+        <main>
+            <div class="prod">
+               <div id="holder"></div>
+               <div class="navbtn">
+                <a class="addbtn" id="BButton"> backward </a>
+                <a class="addbtn" id="FButton"> forward </a>
+               </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+         <div class="container">
+            <p>Copyright© Nazar 2019</p>
+         </div>
+        </footer>
+   </body>
+   
+   <script>
+       let k=0;
+       let max=<%=maximal%>;
+       if(k==max)document.getElementById("FButton").style.display = 'none';
+    $(document).ready(function () { 
+
+        $.ajax({
+            url: "/products/<%=kind%>/"+k.toString(),
+            type: 'put',
+            success:function loader(data){$("#holder").html(data);console.log("works");setTimeout(loader, 60000);}
+        })
+    });
+        console.log(max,"<%=kind%>");
+    document.getElementById("BButton").style.display = 'none';
+    $("#FButton").on("click", function () {
+        ++k
+        document.getElementById("BButton").style.display = 'block';
+        if(k==max)document.getElementById("FButton").style.display = 'none';
+        $.ajax({
+            url: "/products/<%=kind%>/"+k.toString(),
+            type:'put'
+        }).done(function( data ) {
+            console.log("/products/<%=kind%>/"+k );
+            $("#holder").html(data);
+        });
+    });
+
+    $("#BButton").on("click", function () {
+        k--
+        document.getElementById("FButton").style.display = 'block';
+        if(k===0)document.getElementById("BButton").style.display = 'none';
+        $.ajax({
+            url: "/products/<%=kind%>/"+k.toString(),
+            type:'put'
+            
+        })
+        .done(function( data ) {
+            console.log( "Sample of data:", $(data).data());
+            $("#holder").html(data);
+        });
+    });  
+    function add_discount(id){
+        $.ajax({
+            url: "/productsAdmin/<%=kind%>/discount",
+            type:'post',
+            dataType: "json",
+            data:{id:document.getElementById(id).value}
+    })};
+    function del(id){
+        $.ajax({
+            url: "/productsAdmin/<%=kind%>/delite",
+            type:'post',
+            dataType: "json",
+            data: {id:id}
+    })};
+
+</script>
+</html>

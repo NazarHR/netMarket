@@ -30,6 +30,7 @@
    <script>
        let k=0;
        let max=<%=maximal%>;
+       if(k==max)document.getElementById("FButton").style.display = 'none';
     $(document).ready(function () { 
 
         $.ajax({
@@ -80,5 +81,8 @@
             });
             //return false;
      };  
+     function register(){
+         alert("Для здійснення покупок зареєструйтесь");
+     }
 </script>
 </html>

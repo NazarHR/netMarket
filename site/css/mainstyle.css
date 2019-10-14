@@ -126,4 +126,23 @@ a.addbtn {
   a.addbtn:active { background: white; }
   .old{
 	  text-decoration: line-through;
+	  text-decoration-color: #0d0d0d;
   }
+
+  div.old{
+	  position: relative;
+  }
+  div.old::after {
+	display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+}
+.navbtn{
+	margin-left: 40%;
+	margin-right: 40%;
+}

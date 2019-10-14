@@ -21,7 +21,6 @@ market.use(cookieParser())
 
 market.get('/',auth,(req,res)=>{
     console.log(req.user)
-    console.log(req.url)
     if(req.user!=undefined)
     {
         res.render('index',{page:'headLogged'})
@@ -33,26 +32,60 @@ market.get('/',auth,(req,res)=>{
     
 })
 market.get('/products/:name',auth, async(req,res)=>{
-    console.log(req.params)
-    console.log("delimiter")
+    // console.log(req.params)
+    // //console.log("delimiter")
     let num = await poll.query('Select count(*) from $1'.replace('$1',req.params.name))
     let max =Math.ceil(num.rows[0].count/5)-1
-    res.render('products',{page:'head',maximal:max,kind:req.params.name})
+    console.log(max)
+    if(req.user==undefined)
+    {
+        res.render('products',{page:'head',maximal:max,kind:req.params.name})
+    }
+    else
+    {
+        if(req.user.role==0)
+        {
+            res.render('products',{page:'headLogged',maximal:max,kind:req.params.name})
+        }
+        else{
+            res.render('productsAdmin',{page:'headLogged',maximal:max,kind:req.params.name})
+        }
+    }
+        
     res.end();
 })
-market.put('/products/:name/:num',async(req,res)=>{
-    //console.log(req.params.name)
-    console.log(req.url)
-    const products =await poll.query('Select * from $1'.replace('$1',req.params.name))
-    //console.log(products.rows)
-    res.render('productLIst',{products: products.rows})
+market.put('/products/:name/:num',auth,async(req,res)=>{
+    const products =await poll.query('Select * from $1 OFFSET $2 FETCH FIRST 5 ROW ONLY'.replace('$1',req.params.name).replace('$2',5*req.params.num))
+    if(req.user==undefined){
+        res.render('defaultLIst',{products: products.rows})
+    }
+    else{
+        if(req.user.role==0){
+            res.render('productLIst',{products: products.rows})
+        }
+        else if(req.user.role==2)
+        {
+            res.render('productsLIstAdmin',{products: products.rows})
+        }
+    }
+})
+var basket=[]
+market.post('/products/:type',(req,res)=>{
+    basket.push({name:req.user.name,type : req.params.type,id:req.body.id})
+})
+//Admin
+market.post('/productsAdmin/:type/discount',(req,res)=>{
+    console.log(req.params.type,req.body.id)
+})
+market.post('/productsAdmin/:type/delete',(req,res)=>{
+    console.log(req.params.type,req.body.id)
+})
+//basket
+market.get('/basket',(req,res)=>{
+    
 })
 
-market.post('/products/:type',(req,res)=>{
-    //console.log("here");
-    //console.log(req.params.type)
-    //console.log(req.body);
-})
+//register `n` login
 market.post('/register_s', async (req,res)=>{
     try {
         const hasshedpassword= await bcrypt.hash(req.body.password,10)
@@ -85,7 +118,7 @@ market.post('/login_s', async (req,res)=>{
             throw Error("Wrong password")
         }
         //console.log(validPass)
-        const token = jwt.sign({name: result.rows[0].username},'secret')
+        const token = jwt.sign({name: result.rows[0].username, role: result.rows[0].role},'secret')
         console.log(token)
         res.cookie('auth',token);
         //res.writeHead(200,{'authorization': token})
