@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8" />
+        <title>Muse</title>
+        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
+    </head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <body>
+    <%- include(page) %>
+        <main>
+            <div class="send">
+               <textarea id="msgHolder" type="text" name="reply" placeholder="Зміст повідомлення" size="50" rows="10" cols="52" ></textarea><br>
+               <div class="sndbtn">
+                <a class="addbtn" onclick="send()"> Надіслати </a>
+            </div>
+        </main>
+        
+        <footer class="footer">
+         <div class="container">
+            <p>Copyright© Nazar 2019</p>
+         </div>
+        </footer>
+   </body>
+   
+   <script>
+    function send(){
+        let msg=document.getElementById("msgHolder").value;
+        $.ajax({
+            url:'/rozsl',
+            type:'POST',
+            data: {message:msg}
+        })
+    }
+    </script>
+</html>

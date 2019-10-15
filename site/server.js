@@ -1,5 +1,6 @@
 const pg = require('pg');
 const fs=require('fs');
+const nodemailer = require('nodemailer');
 const cookieParser = require('cookie-parser')
 const express=require('express')
 const jwt = require('jsonwebtoken')
@@ -14,6 +15,18 @@ const poll = pg.Pool(
         database: "muse"
     }
 )
+let transport = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: "3924826c0ee9d5",
+      pass: "8a9e06afb965ce"
+    },
+    poll:true,
+    rateLimit: true,
+    maxConnections:1,
+    maxMessages: 3
+  });
 market.set('view engine','ejs');
 market.use(express.urlencoded({extended:false}))
 market.use(cookieParser())
@@ -23,7 +36,14 @@ market.get('/',auth,(req,res)=>{
     console.log(req.user)
     if(req.user!=undefined)
     {
-        res.render('index',{page:'headLogged'})
+        if(req.user.role==0)
+        {
+            res.render('index',{page:'headLogged'})
+        }
+        else if(req.user.role==2)
+        {
+            res.render('index',{page:'adminHead'})
+        }
     }
     else
     {
@@ -48,7 +68,7 @@ market.get('/products/:name',auth, async(req,res)=>{
             res.render('products',{page:'headLogged',maximal:max,kind:req.params.name})
         }
         else{
-            res.render('productsAdmin',{page:'headLogged',maximal:max,kind:req.params.name})
+            res.render('productsAdmin',{page:'adminHead',maximal:max,kind:req.params.name})
         }
     }
         
@@ -69,22 +89,100 @@ market.put('/products/:name/:num',auth,async(req,res)=>{
         }
     }
 })
-var basket=[]
-market.post('/products/:type',(req,res)=>{
-    basket.push({name:req.user.name,type : req.params.type,id:req.body.id})
+basket=[]
+market.post('/product/to/basket',async (req,res)=>{
+    const good =await poll.query(('Select * from $1 where id= $2'.replace('$1',req.body.type).replace('$2',req.body.id)))
+    basket.push(good.rows[0])
+})
+market.post('/buskdel',auth,async(req,res)=>{
+    for(let i=0;i<basket.length;++i)
+    {
+        if(basket[i].name==req.body.toDel){
+            basket.splice(i, 1);
+            break;
+        }
+    }
+    await poll.query(('insert into history values(\'$1\',\'$2\',\'Видалено\')'.replace('$1',req.user.name).replace('$2',req.body.toDel)))
+})
+market.post('/busksucc',auth,async(req,res)=>{
+    for(let i=0;i<basket.length;++i){
+        await poll.query(('insert into history values(\'$1\',\'$2\',\'Підтверджено\')'.replace('$1',req.user.name).replace('$2',basket[i].name)))
+    }
+    basket=[]
+})
+//history
+market.get('/history',auth,async(req,res)=>{
+    if(req.user!=undefined)
+    {
+        let num = await poll.query('Select count(*) from history where username = \'$1\''.replace('$1',req.user.name))
+        let max =Math.ceil(num.rows[0].count/5)-1
+        res.render('history',{page:'headLogged',maximal:max})
+    }
+    else{
+        res.send("FORBIDDEN")
+    }
+})
+market.put('/history/:page',auth,async(req,res)=>{
+    const products =await poll.query(('Select * from history where username =\'$1\' OFFSET $2 FETCH FIRST 5 ROW ONLY'.replace('$1',req.user.name).replace('$2',5*req.params.page)))
+    res.render('historyList',{products: products.rows})
+})
+//sender
+market.get('/rozsl',auth, (req,res)=>{
+    if(req.user!=undefined)
+    {
+        if(req.user.role==2)
+        {
+            res.render('mail',{page:'adminHead'})
+        }
+        else
+        {
+            res.send("FORBIDDEN")
+        }
+    }
+    else
+    {
+        res.send("FORBIDDEN")
+    } 
+})
+market.post('/rozsl',async(req,res)=>{
+    const data=await poll.query('Select username, email from users where role=0')
+    users=data.rows
+    for(let i =0;i<2;++i)
+    {
+        const message = {
+            from: 'elonmusk@muse.com', // Sender address
+            to: users[i].email,         // List of recipients
+            subject: 'Цікава інформація для '+users[i].username, // Subject line
+            text: req.body.message // Plain text body
+        };
+        transport.sendMail(message)
+    }
 })
 //Admin
-market.post('/productsAdmin/:type/discount',(req,res)=>{
-    console.log(req.params.type,req.body.id)
+market.post('/productsAdmin/:type/discount',async (req,res)=>{
+    await poll.query('UPDATE $1 set discount = $2 where id = $3'.replace('$1',req.params.type).replace('$2',req.body.value).replace('$3',req.body.id))
 })
-market.post('/productsAdmin/:type/delete',(req,res)=>{
-    console.log(req.params.type,req.body.id)
+market.post('/productsAdmin/:type/delete',async (req,res)=>{
+    await poll.query(('delete from $1 where id = $2').replace('$1',req.params.type).replace('$2',req.body.id))
 })
-//basket
-market.get('/basket',(req,res)=>{
-    
+market.post('/productsAdmin/:type/add',async (req,res)=>{
+    await poll.query(('insert into $1(name,price) values (\'$2\', $3)').replace('$1',req.params.type).replace('$2',req.body.name).replace('$3',req.body.price))
+    //console.log(('insert into $1(name,price) values ($2, $3)').replace('$1',req.params.type).replace('$2',req.body.name).replace('$3',req.body.price))
 })
 
+//basket
+market.get('/basket',(req,res)=>{
+    res.render('basket',{page:'headLogged'})
+})
+market.put('/basket',(req,res)=>{
+    if(basket.length==0)
+    {
+        res.send("Basket is empty")
+    }
+    else{
+        res.render('basketList',{products: basket})
+    }
+})
 //register `n` login
 market.post('/register_s', async (req,res)=>{
     try {
@@ -133,6 +231,7 @@ market.post('/login_s', async (req,res)=>{
 market.get('/logout',(req,res)=>
 {
     res.clearCookie('auth')
+    basket=[]
     res.redirect('/')
 })
 market.listen(3000,()=>console.log("server started"));

@@ -142,6 +142,9 @@ a.addbtn {
     bottom: 8px;
     left: 0;
 }
+.prod img{
+	width: 150px;
+}
 .navbtn{
 	margin-left: 40%;
 	margin-right: 40%;

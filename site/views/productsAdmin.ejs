@@ -11,6 +11,8 @@
         <main>
             <div class="prod">
                <div id="holder"></div>
+               <input id="ptaname" type="text" placeholder="Назва товару"><input id="ptaprice" type="ціна">
+               <a class="addbtn" onclick="add()"> Добавити </a>
                <div class="navbtn">
                 <a class="addbtn" id="BButton"> backward </a>
                 <a class="addbtn" id="FButton"> forward </a>
@@ -29,15 +31,16 @@
        let k=0;
        let max=<%=maximal%>;
        if(k==max)document.getElementById("FButton").style.display = 'none';
-    $(document).ready(function () { 
-
+    $(document).ready(content());
+    console.log(max,"<%=kind%>");
+    function content () { 
         $.ajax({
             url: "/products/<%=kind%>/"+k.toString(),
             type: 'put',
-            success:function loader(data){$("#holder").html(data);console.log("works");setTimeout(loader, 60000);}
+            success:function loader(data){$("#holder").html(data);console.log("works")}
         })
-    });
-        console.log(max,"<%=kind%>");
+        setTimeout(content, 30000)
+    };
     document.getElementById("BButton").style.display = 'none';
     $("#FButton").on("click", function () {
         ++k
@@ -71,15 +74,25 @@
             url: "/productsAdmin/<%=kind%>/discount",
             type:'post',
             dataType: "json",
-            data:{id:document.getElementById(id).value}
-    })};
+            data:{id:document.getElementById(id).id,value:document.getElementById(id).value}
+        }).done(content());
+}   ;
     function del(id){
         $.ajax({
-            url: "/productsAdmin/<%=kind%>/delite",
+            url: "/productsAdmin/<%=kind%>/delete",
             type:'post',
             dataType: "json",
             data: {id:id}
-    })};
-
+        }).done(content());
+    };
+    function add(){
+        $.ajax({
+            url: "/productsAdmin/<%=kind%>/add",
+            type:'post',
+            dataType: "json",
+            data: {name: document.getElementById("ptaname").value,price:document.getElementById("ptaprice").value}
+        }).done(content());
+        
+    };
 </script>
 </html>

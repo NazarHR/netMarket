@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
     </head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
  <body>
     <%- include(page) %>
         <main>
@@ -31,13 +32,14 @@
        let k=0;
        let max=<%=maximal%>;
        if(k==max)document.getElementById("FButton").style.display = 'none';
-    $(document).ready(function () { 
+    $(document).ready(function content () { 
 
         $.ajax({
             url: "/products/<%=kind%>/"+k.toString(),
             type: 'put',
-            success:function loader(data){$("#holder").html(data);console.log("works");setTimeout(loader, 60000);}
+            success:function loader(data){$("#holder").html(data);console.log("works");}
         })
+        setTimeout(content, 30000);
     });
         console.log(max,"<%=kind%>");
     document.getElementById("BButton").style.display = 'none';
@@ -69,17 +71,12 @@
         });
     });  
     function add_to_basket(prod_id) {
-            console.log(prod_id)
-            $.ajax({
-                url:'',
-                type:'post',
-                dataType: "json",
-                data:{id:prod_id}
-                // success:function(){
-                //     alert("worked");
-                //}
-            });
-            //return false;
+        $.ajax({
+            url:'/product/to/basket',
+            type:'POST',
+            dataType: "json",
+            data: {type:'<%=kind%>' ,id:prod_id}
+        }) 
      };  
      function register(){
          alert("Для здійснення покупок зареєструйтесь");

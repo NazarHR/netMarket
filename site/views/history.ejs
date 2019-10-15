@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8" />
+        <title>Muse</title>
+        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
+    </head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+ <body>
+    <%- include(page) %>
+        <main>
+            <div class="prod">
+               <div id="holder"></div>
+               <form>
+                <button type="button" id="BButton"> backward </button>
+                </form>
+                <form>
+                    <button type="button" id="FButton"> forward </button>
+                </form>
+            </div>
+        </main>
+        
+        <footer class="footer">
+         <div class="container">
+            <p>Copyright© Nazar 2019</p>
+         </div>
+        </footer>
+   </body>
+   
+   <script>
+       let k=0;
+       let max=<%=maximal%>;
+       if(k==max)document.getElementById("FButton").style.display = 'none';
+    $(document).ready(function content () { 
+
+        $.ajax({
+            url: "/history/"+k.toString(),
+            type: 'put',
+            success:function loader(data){$("#holder").html(data);console.log("works");}
+        })
+        setTimeout(content, 30000);
+    });
+    document.getElementById("BButton").style.display = 'none';
+    $("#FButton").on("click", function () {
+        ++k
+        document.getElementById("BButton").style.display = 'block';
+        if(k==max)document.getElementById("FButton").style.display = 'none';
+        $.ajax({
+            url: "/history/"+k.toString(),
+            type:'put'
+        }).done(function( data ) {
+            $("#holder").html(data);
+        });
+    });
+
+    $("#BButton").on("click", function () {
+        k--
+        document.getElementById("FButton").style.display = 'block';
+        if(k===0)document.getElementById("BButton").style.display = 'none';
+        $.ajax({
+            url: "/history/"+k.toString(),
+            type:'put'
+            
+        })
+        .done(function( data ) {
+            console.log( "Sample of data:", $(data).data());
+            $("#holder").html(data);
+        });
+    });  
+</script>
+</html>

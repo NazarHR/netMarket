@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8" />
+        <title>Muse</title>
+        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css">
+    </head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+ <body>
+    <%- include(page) %>
+        <main>
+            <div class="prod">
+               <div id="basket"></div>
+               
+            </div>
+        </main>
+        
+        <footer class="footer">
+         <div class="container">
+            <p>Copyright© Nazar 2019</p>
+         </div>
+        </footer>
+   </body>
+   
+   <script>
+    $(document).ready(content());
+    function content () { 
+        var values = document.cookie.replace(/(?:(?:^|.*;\s*)basket-data\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        $.ajax({
+            url: "/basket",
+            type: 'put',
+            data: {data:values},
+            success:function loader(data){$("#basket").html(data);console.log("works");}
+        })
+        setTimeout(content, 30000);
+    }
+    function del(name)
+    {
+        $.ajax({
+            url:'/buskdel',
+            type: 'post',
+            data: {toDel:name}
+        }).done(content());
+    }
+    function add_all()
+    {
+        $.ajax({
+            url:'/busksucc',
+            type: 'post',
+        }).done(content());
+    }
+  
+</script>
+</html>
