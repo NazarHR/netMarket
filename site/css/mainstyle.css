@@ -3,6 +3,11 @@ body{
 	font-size: 100%;
 	margin: 0;
 	background-color: #1a1a1a;
+	
+}
+.prod{
+	height: 100%;
+	min-height: 100%;
 }
 ul{
 	margin: 0;
@@ -105,7 +110,10 @@ color: yellowgreen;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	color: white;
+	position: relative;
 	background-color: #0d0d0d;
+	width: 100%;
+
 }
 #holder li{
 	color: white;
@@ -130,22 +138,71 @@ a.addbtn {
   }
 
   div.old{
-	  position: relative;
+	  text-decoration-line: line-through;
+	  text-decoration-style: double;
+	  text-decoration-color: red;
   }
-  div.old::after {
-	display: block;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: red;
-    position: absolute;
-    bottom: 8px;
-    left: 0;
-}
+
 .prod img{
 	width: 150px;
 }
 .navbtn{
 	margin-left: 40%;
 	margin-right: 40%;
+}
+#holder{
+	margin-left:10%;
+	margin-right: 10%;
+	
+}
+#holder a{
+	float: right;
+	margin-top:22px;
+	margin-bottom: 22px;
+}
+#holder li{
+	padding: 10px 0;
+}
+#holder input{
+	padding: 15px;
+	box-sizing: border-box;
+	width: 20%;
+}
+.send{
+	padding-top: 50px;;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: center;;
+}
+.send a{
+	margin-top:15px;
+}
+.send textarea{
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+}
+.navbtn
+{
+	margin-top: 20px;;
+	text-align: center;
+	position: relative;
+}
+.navbtn button{
+	display: inline-block;
+}
+.adder
+{
+	text-align: center;
+}
+.adder input{
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 15px;
+	box-sizing: border-box;
+	width: 20%;
+}
+.prod_name{
+	display: inline;
 }

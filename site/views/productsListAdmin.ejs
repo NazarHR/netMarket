@@ -1,7 +1,7 @@
 <ul>
     <% for(let i=0; i<products.length; ++i) { %>
         <li>
-            <img src= "image/<%=products[i].id%>" > <%=products[i].name %>
+            <img src= "../image/<%=products[i].id%>.jpg" ><%=products[i].name %>
             <%=products[i].price %>
             <input id="<%=products[i].id%>" placeholder="знижка ">
             <a class="addbtn" , onmousedown="add_discount(<%=products[i].id%>)">Знизити ціну</a>

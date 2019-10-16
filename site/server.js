@@ -33,7 +33,7 @@ market.use(cookieParser())
 //const html = fs.createReadStream(__dirname + "/index.html",'utf-8');
 
 market.get('/',auth,(req,res)=>{
-    console.log(req.user)
+    //console.log(req.user)
     if(req.user!=undefined)
     {
         if(req.user.role==0)
@@ -56,7 +56,7 @@ market.get('/products/:name',auth, async(req,res)=>{
     // //console.log("delimiter")
     let num = await poll.query('Select count(*) from $1'.replace('$1',req.params.name))
     let max =Math.ceil(num.rows[0].count/5)-1
-    console.log(max)
+    //console.log(max)
     if(req.user==undefined)
     {
         res.render('products',{page:'head',maximal:max,kind:req.params.name})
@@ -193,7 +193,7 @@ market.post('/register_s', async (req,res)=>{
             hasshedpassword
         ];
         await poll.query("INSERT INTO users VALUES ($1, $2, $3);", [user[0],user[1],user[2]])
-        console.log('registered')
+        //console.log('registered')
         res.redirect('/login')
     } catch(error) {
         res.redirect('/register')
@@ -217,7 +217,7 @@ market.post('/login_s', async (req,res)=>{
         }
         //console.log(validPass)
         const token = jwt.sign({name: result.rows[0].username, role: result.rows[0].role},'secret')
-        console.log(token)
+        //console.log(token)
         res.cookie('auth',token);
         //res.writeHead(200,{'authorization': token})
         res.redirect('/')

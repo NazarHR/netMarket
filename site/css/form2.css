@@ -1,5 +1,4 @@
 body {
-  /*background-image: url(http://kreativo.se/backlogin.jpg);*/
   background-color: #1a1a1a;
   font-family: Arial, San-Serif;
   padding-top: 40px;
@@ -10,7 +9,7 @@ body {
 }
 .login h1{
   font-size: 280%;
-  padding-left: 20%;
+  padding-left: 14%;
 }
 .login form{
   padding-top: 10px;
@@ -23,7 +22,7 @@ body {
   width: 50%;
 }
 .login button{
-  margin-left: 20%;
+  margin-left: 180px;
   margin-top: 35px;
   padding: 10px;
   display: inline-block;
